@@ -7,11 +7,8 @@ import './index.css'
 import Protected from './utils/Protected'
 import Login from './pages/Login'
 import Register from './pages/register'
-import Layout from './layouts/layout'
+import Layout from './layouts/Layout'
 import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Hello from './pages/Hello'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,11 +17,6 @@ const router = createBrowserRouter(
       <Route path='/register' element={<Register />} />
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path='about/' >
-          <Route index element={<About />} />
-          <Route path='hello' element={<Hello />} />
-        </Route>
-        <Route path='/contact' element={<Contact />} />
       </Route>
     </Route>
     

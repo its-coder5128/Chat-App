@@ -20,8 +20,6 @@ export const MsgProvider = ({children}) => {
                 setMsg(prevState => prevState.filter(message => message.$id !== response.payload.$id))
             }
         });
-
-        console.log('unsubscribe:', unsubscribe)
       
         return () => {
           unsubscribe();
@@ -43,8 +41,6 @@ export const MsgProvider = ({children}) => {
     const handleDeleteMsg = async (doc_id)=>{
         try{
             let response = await database.deleteDocument(conf.appwriteDatabaseID,conf.appwriteRoomID,doc_id);
-            console.log("response message",response)
-            
         }catch(error){
             console.error(error)
         }

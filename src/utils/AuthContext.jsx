@@ -28,8 +28,6 @@ export const AuthProvider = ({children}) => {
 
         e.preventDefault()
 
-        console.log("cred",cred);
-
         try{
             let response = await account.create(ID.unique(), cred.email, cred.password,cred.name);
             console.log("res",response)
@@ -45,8 +43,6 @@ export const AuthProvider = ({children}) => {
     const handleLogin = async (e,cred) => {
 
         e.preventDefault()
-
-        console.log("cred",cred);
 
         try{
             await account.createEmailSession(cred.email,cred.password)

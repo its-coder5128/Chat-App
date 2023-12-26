@@ -13,8 +13,6 @@ function Login(){
         let value = e.target.value
 
         setCred((prev) => ({...prev, [name] : value}))
-
-        console.log("cred",cred)
     }
 
     useEffect(()=>{

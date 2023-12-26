@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../utils/AuthContext";
 import { useMsg } from "../utils/MsgContext";
-import { ID } from "appwrite";
 
 function Home(){
     const [messageBody,setMessageBody] = useState("")
@@ -58,7 +57,7 @@ function Home(){
                             <ul>
                                 {
                                     msg.map((item)=>(
-                                        <li key={ID.unique()} className= {` flex flex-col pr-2 ${user?.$id !== item.user_id ? "items-start":"items-end"}`}> 
+                                        <li key={item.$createdAt} className= {` flex flex-col pr-2 ${user?.$id !== item.user_id ? "items-start":"items-end"}`}> 
                                                 <small className=" text-gray-400 px-4">{item.username}</small>
                                                 <div className="flex gap-3 justify-center items-center">
                                                     {user?.$id === item.user_id && 
