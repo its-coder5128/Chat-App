@@ -6,7 +6,7 @@ import { MsgProvider } from './utils/MsgContext'
 import './index.css'
 import Protected from './utils/Protected'
 import Login from './pages/Login'
-import Register from './pages/register'
+import Register from './pages/Register'
 import Layout from './layouts/Layout'
 import Home from './pages/Home'
 
